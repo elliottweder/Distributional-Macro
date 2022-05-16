@@ -65,7 +65,7 @@ $c_t + k_t = k_{t-1}(1 + r) + y_t \cdot w + dx_t$
 
 # ╔═╡ f983a093-d397-43fe-8951-4ad1e795df3c
 answer1 = md"""
-When money is injected into or withdrawn from the economy (for example, through a tax rebate or COVID-related stimulus), policy makers care about how much consumption and savings change (the real effect on the economy). MPC heterogeneity is important because MPCs vary across groups in the economy, and so policies that target these groups differentially will affect the economy in distinct ways. For example, withdrawing money from the economy affects rich and poor households differently (poorer households tend to consume less and richer households tend to save less).
+When income is injected into or withdrawn from the economy (for example, through a tax rebate or COVID-related stimulus), policy makers care about how much consumption and savings change (the real effect on the economy). MPC heterogeneity is important because MPCs vary across groups in the economy, and so policies that target these groups differentially will affect the economy in distinct ways. For example, withdrawing income from the economy affects rich and poor households differently (poorer households tend to consume less and richer households tend to save less).
 """
 
 # ╔═╡ bddb7831-b3c1-45c4-a8c2-e9ee38c92f87
@@ -96,7 +96,7 @@ As a first step, let's consider a more simple model without income risk and with
 
 # ╔═╡ c49e8c46-f825-4b39-8b04-993219ff9d10
 md"""
-With no income risk (we assume $y_{t} = 1$) and no borrowing constraint, the maximisation problem is given by:
+With no income risk (we assume $y_{t} = 1 \ \forall \ t$) and no borrowing constraint, the maximisation problem is given by:
 
 $\max_{c_{t},k_{t}}\sum_{t=0}^{\infty}\beta^{t}(u(c_{t}) + \lambda_{t}(k_{t-1}(1 + r) + w + dx_{t} - c_{t} - k_{t} ))$
 
@@ -2001,8 +2001,8 @@ version = "3.5.0+0"
 # ╠═62184229-03f6-40d8-981e-4d39a74c75d7
 # ╠═50029ced-5ab0-4458-ad5a-31b8277b428a
 # ╟─146fd4a6-b743-4c22-a3ed-15c5bdaac7a1
-# ╟─c49e8c46-f825-4b39-8b04-993219ff9d10
-# ╟─b425a78c-f56c-4626-bd54-9c3f52d50313
+# ╠═c49e8c46-f825-4b39-8b04-993219ff9d10
+# ╠═b425a78c-f56c-4626-bd54-9c3f52d50313
 # ╠═c9b9315a-4109-4004-9d4b-d8c1aa2e1521
 # ╟─af210613-5626-4327-b3bb-97b0a3ba3496
 # ╟─843f658c-0e26-4eed-88dc-3946e97e5f6f
