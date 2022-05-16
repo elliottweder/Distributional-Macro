@@ -28,6 +28,11 @@ using DataFrames
 # ╔═╡ 6b8b0739-af1a-4ee9-89f1-291afdc47980
 using QuantEcon
 
+# ╔═╡ 3ce6e375-be10-4c11-a95b-9de7f29ae510
+md"""
+# Romeo and Julia 
+"""
+
 # ╔═╡ e2fd4ac1-ad11-4d48-bcf0-d38d32384b0c
 md"""
 `mpcs_aiyagari.jl` | **Version 1.0** | *last updated: May 10 2022* | *created by [Daniel Schmidt](https://github.com/danieljschmidt)*
@@ -1988,8 +1993,9 @@ version = "3.5.0+0"
 """
 
 # ╔═╡ Cell order:
+# ╟─3ce6e375-be10-4c11-a95b-9de7f29ae510
 # ╟─e2fd4ac1-ad11-4d48-bcf0-d38d32384b0c
-# ╟─4aa065ca-d54c-419a-a31a-7063fbb98a33
+# ╠═4aa065ca-d54c-419a-a31a-7063fbb98a33
 # ╟─ca4b4ec9-99b1-49ad-87dc-cf8a983dac06
 # ╠═f983a093-d397-43fe-8951-4ad1e795df3c
 # ╟─097d4912-4cc9-427f-8cba-724dcea67186
