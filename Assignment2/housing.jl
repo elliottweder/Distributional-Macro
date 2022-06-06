@@ -309,7 +309,7 @@ In this assignment we will explore how demographic change is affecting the aggre
 
 # ╔═╡ fa6f6504-4a9e-42d9-bb12-96c9b314bf5a
 answer1 = md"""
-Let ``n = 1``. Let the statistic to be matched by the model be the ratio of housing expenditure to income: ``\frac{ph}{y}``. In the data the value is ``\approx 2.102``. Relative to the default sliders we decreased ``\beta``, increased ``\delta``, and increase the utility weight on housing ``\zeta``. These all increase the spending on housing (maintenance, discounting and utilty weight)
+Let ``n = 1``: match the ratio (because of the order of magnitude differences) of housing expenditure to income: ``\frac{ph}{y}``. In the data the value is ``\approx 2.102``. The statistic shows how important housing expenditures are compared to income. Relative to the default sliders increased ``\delta``, and increase the utility weight on housing ``\zeta``. These all increase the spending on housing (maintenance and utilty weight). The value of the ratio from the model is then ``\approx 2.107``.
 """
 
 # ╔═╡ 77de36ca-8556-409d-b249-12639c79f832
@@ -340,23 +340,25 @@ md"""
 👉 **Aggregate response** (3 points) | Compute the aggregate consumption response to a 10% reduction in house prices for varying age structures. You can use `cres_df` and `age_weights`.
 """
 
-# ╔═╡ 2389faea-94ea-4308-9ce2-f2248c337db6
-md"""
-Calculate aggregate consumption response for varying age structure. So we want to calculate, by year, the aggregate cons. response (change in mean) - given the calibrated aggregated consumption responses (in `cres_df`)
-"""
-
 # ╔═╡ 05acb2b7-7e5f-4ce7-b37e-3366026a3d1e
 md"""
-We can see that over time average consumption response to a change in house prices rises. This follows because: the consumption response to a change in house prices rises with age, and the average age is rising (from 1980 to 2040). 
+First, we plot the average consumption response to a fall in house prices over time. The average is falling over time because the consumption response to a fall in house prices decreases with age, and the average age is rising (from 1980 to 2040). 
+"""
+
+# ╔═╡ 674cf47c-1898-46d2-a12a-3e7f16d1667e
+md"""
+Next, we plot the aggregate consumption response to a fall in house prices. The aggregate response is falling over time because the consumption response to a fall in house prices decreases with age, and the average age is rising (from 1980 to 2040). 
 """
 
 # ╔═╡ 109bb399-d9ae-4ba4-a393-66cf5ce89365
 answer2 = md"""
-After the GFC it is obvious that the financial sector is intimately linked to the housing market. A fall in house prices may result in financial contagion if banks, shadow banks, etc. fail - which is related to house prices. This alludes to the missing general equilibrium aspect of the model - prices are given and not determined by labour or debt market clearing conditions. 
+The financial sector and housing market are intimately linked in the real world. In the model there is no financial sector that is exposed to the housing sector. 
 
-Furthermore, house prices are exogenous in the model. In the real world, demand and supply of housing determine the price endogenously. Also, as is the case in many countries, house prices have been rising for extended periods of time (rather than fluctuating between ``p_{0}`` and ``p_{1}``). 
+The model is also not general equilibrium. Prices (wages and house prices) are not determined by demand and supply. The supply of housing is completely elastic - in real life there are resource and space constraints.  
 
-Lastly, in the model's equilibrium house ownership is constant - agents buy a house at age ``j = 25`` and keep it for their entire lifecyle. The graphs below show that this is not the case in the real world. Ownership is low for young persons (age < 35) in the data. The rising home ownership rate with age is missing in the model. 
+Lastly, in the equilibrium house ownership is constant - agents buy a house at age ``j = 25`` and keep it for their entire lifecyle. The graphs below show that this is not the case in the real world. Ownership is low for young persons (age < 35) in the data. The rising home ownership rate with age is missing in the model. 
+
+Also, the model cannot replicate the fall in home ownership among young persons over time. The falling ownership rate may be due to the fact that, in many countries, house prices have been rising for an extended period of time (rather than fluctuating between ``p_{0}`` and ``p_{1}``).  
 """
 
 # ╔═╡ ac432f89-c103-4268-ae68-d8c668b6cddc
@@ -528,6 +530,17 @@ responses = combine(age_data, :response => mean)
 @chain responses begin
 		data(_) * 
 			mapping(:year, :response_mean) * 
+			visual(Lines)
+		draw
+	end
+
+# ╔═╡ 3226725e-2a86-433c-9291-80d1fc04d077
+responses_sum = combine(age_data, :response => sum)
+
+# ╔═╡ b0e22e1e-188c-408f-a4ff-c1a95e9ced56
+@chain responses_sum begin
+		data(_) * 
+			mapping(:year, :response_sum) * 
 			visual(Lines)
 		draw
 	end
@@ -2004,13 +2017,15 @@ version = "3.5.0+0"
 # ╟─f23da3a5-d494-4a51-b31f-0237681c0bed
 # ╟─0c41a7bc-aecd-4980-bb88-62fafb469750
 # ╠═18040182-9592-4fdc-a206-a167d152d475
-# ╟─2389faea-94ea-4308-9ce2-f2248c337db6
 # ╠═92837431-1eec-4318-9db9-04ce9e244dbc
 # ╠═ca56a38e-0f2d-4539-add8-6ffed40b9301
 # ╠═115bdf6a-1bb3-432f-9c88-33d0aa0fedcc
 # ╠═eb9aff48-8317-4da8-b5e9-646a6fcfe45c
 # ╠═66aca987-30c8-4eaf-ac12-5546895d0432
-# ╟─05acb2b7-7e5f-4ce7-b37e-3366026a3d1e
+# ╠═05acb2b7-7e5f-4ce7-b37e-3366026a3d1e
+# ╠═3226725e-2a86-433c-9291-80d1fc04d077
+# ╠═b0e22e1e-188c-408f-a4ff-c1a95e9ced56
+# ╟─674cf47c-1898-46d2-a12a-3e7f16d1667e
 # ╟─0bb919c0-a71a-4acd-9bf1-d5af4096112e
 # ╟─109bb399-d9ae-4ba4-a393-66cf5ce89365
 # ╟─d3f8729a-f656-45ee-9606-8b28410ff265
