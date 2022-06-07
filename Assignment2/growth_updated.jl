@@ -196,7 +196,7 @@ Which gives us equation 1.
 
 The household solves the following utility maximisation problem:
 
-$\max c_{t+1} + v(L_{t}) + \lambda_{t}(y_{t} - p_{t}L_{t} - f_{t}S_{t} - D_{t}) + \mu_{t}(y_{t+1} + p_{t+1}L_{t} + (f_{t+1} + d_{t+1})S_{t} + (1 + r_{t+1})D_{t} - c_{t+1})$
+$\max_{c_t, L_t, S_t, D_t} c_{t+1} + v(L_{t}) + \lambda_{t}(y_{t} - p_{t}L_{t} - f_{t}S_{t} - D_{t}) + \mu_{t}(y_{t+1} + p_{t+1}L_{t} + (f_{t+1} + d_{t+1})S_{t} + (1 + r_{t+1})D_{t} - c_{t+1})$
 
 The FOC wrt. $S_{t}$:
 
@@ -495,15 +495,16 @@ trends(trends_vars_1_ϕ, trends_vars_1)
 answer_3 = md"""
 The rise in educated workers gives the following trends:
 * Interest rate falls:
-	Directly due to K/Y rising in the model(discussed below); but intuitively because there is an increase in savings 
+	Directly due to K/Y rising in the model(discussed below); but intuitively because 
+    there is an increase in savings 
 * Decreasing share of intangible capital
-	According to the paper, a higher ϕ should reduce investable assets, which reduces the interest rate and favours physical investments over intangible ones due to complementarity
+	According to the paper, a higher ϕ should reduce investable assets, which reduces the interest rate and favours physical investments over intangible ones due to complementarity (Perotti and Döttling 2019, p. 24)
 * Increasing physical capital investment
 	A rise in ϕ leads to a higher MPK, so K/Y rises (since there are diminishing returns, Y does not increase by as much). 
 * Fall in mortgage borrowing
 	Because ϕ directly decreases the mortgage borrowing; and prices fall such that mortgage fall indirectly too. 
 * Fall in house prices over $Y$
-	A fall in interest rates leads to $Y$ rising faster than house prices 
+	A fall in interest rates leads to Y rising faster than house prices 
 * Rise is stock prices
 	Interest rates fall so the return on stocks rises (steady-state equation)
 * Fall in wage inequality 
@@ -637,6 +638,16 @@ The increased savings from abroad can be invested into physcial capital, so $\fr
 Interest rates fall, which favours physical investment. Therefore, $\frac{H}{H+K}$ falls. 
 
 Lastly, there is no change in the wage inequality. This is because there is no change in the relative labour supply of high- and low-skilled workers. 
+"""
+
+# ╔═╡ 64b4a3ea-5511-4acd-b73a-3c043cff9137
+md"""
+## References
+"""
+
+# ╔═╡ 3453e438-994e-4600-89ce-df91e3070697
+md"""
+Perotti, E., & Döttling, R. (2019). Redistributive Growth.
 """
 
 # ╔═╡ ca779c4e-35ca-43c1-be4f-624214e7f87e
@@ -1872,6 +1883,8 @@ version = "0.9.1+5"
 # ╠═fd4c3c22-69e4-4b25-bc45-3cd958ca83a8
 # ╟─c9bde4ee-2315-4d69-9981-2c7e3de869f6
 # ╟─3062ccf9-bb99-420a-b0a6-d1f6aa2b4a04
+# ╟─64b4a3ea-5511-4acd-b73a-3c043cff9137
+# ╟─3453e438-994e-4600-89ce-df91e3070697
 # ╟─ca779c4e-35ca-43c1-be4f-624214e7f87e
 # ╟─b7374016-c764-4183-831f-4df4035bd156
 # ╟─0354492c-ca28-4642-a0f2-2734132a0800

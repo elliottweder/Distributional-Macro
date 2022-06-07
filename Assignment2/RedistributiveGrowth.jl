@@ -312,7 +312,7 @@ The steady state interest rate $r$ = $(round(model_equations_1(K, H, mod).r*100,
 
 # ╔═╡ e9fcc415-f33e-4dbe-a422-792bf96e5974
 answer_2 = md"""
-In the real world, we observe that the interest rate is declining. Perotti and Döttling (2019) argue that this is due to the technological shift to intangible assets. This asset type relies on the skilled human capital which cannot be owned. Consequently, capital and therefore overall investale falls which results in decilining interest rates. However, in the model we observe, that with decreasing K, the interest rate is rising if we keep H constant. When we keep K constant and increase H, the interest rate also decreases which does not align with real world observation. A possible explanation might be that the interest rate is the marginal return of capital which increases with a decrease in K as we have a Cobb-Douglas production function.
+The real interest rate is approximately the difference between the nominal interest rate minus inflation. Considering current nominal interest rate and inflation it does not make sense that the interest rate is that high. One reason may be that the parameters do not align with real world. Further, this model does not consider any inflation and models everything in terms of real values. Hence, the relation between the real and nominal interest rate as well as inflation is not considered here. 
 """
 
 # ╔═╡ 902217fd-d669-4324-8474-5ae2d0ff145f
@@ -453,7 +453,7 @@ trends(trends_vars_ϕ, trends_vars)
 
 # ╔═╡ 8772b001-b85c-4d24-9b82-4bd2b2f3af9a
 answer_3 = md"""
-The only secular trends that the growth driver can explain are the decreasing interest rates and the increasing stock prices. All else goes in the opposite direction. A possible explanation is that an increase in $\phi$ decreases the inelastic supply of high-skileed labor and increases the inelastic supply of low-skilled labor. This way is becomes relatively cheaper to use low-skilled labor which is why the share of intangible capital decreases while the investment in physical capital increases. As capital increases, the interest rate decreases (euqation 1). Stock prices increase as interest rates decreases, off-setting the decrease in intangible assets (mention sth on $R_H$). The prices also decreases as the interest rate decreases. Mortgage on the other hand decreases due to the direct effect of the increase in $\phi$ but also due to the decreases in prices and increase in inelastic low-skilled labor supply. The increase in stock prices is not able to offset these effects. Sth on q?!
+The only secular trends that the growth driver can explain are the decreasing interest rates and the increasing stock prices. All else goes in the opposite direction. A possible explanation is that an increase in $\phi$ decreases the inelastic supply of high-skileed labor and increases the inelastic supply of low-skilled labor. This way is becomes relatively cheaper to use low-skilled labor which is why the share of intangible capital decreases while the investment in physical capital increases. As capital increases, the interest rate decreases (euqation 1). Stock prices increase as interest rates decreases, off-setting the decrease in intangible assets (mention sth on $R_H$). The prices also decreases as the interest rate decreases. Mortgage on the other hand decreases due to the direct effect of the increase in $\phi$ but also due to the decreases in prices. The increase in stock prices is not able to offset these effects. Sth on q?!
 """
 
 # ╔═╡ b5df5021-ef85-49f1-ae28-391a7b55929c
@@ -507,7 +507,7 @@ function model_equations_4(K, H, mod)
 
 	(; Y, r, R_H, f, p) = model_equations_3(K, H, mod)
 
-	(; α, s, ω, L̄, ψ) = mod
+	(; α, ω, L̄, ψ, s) = mod
 	
 	eq_1 = H - ω/ψ * R_H                # eq. 3 (rearranged)
 	eq_2 = (1 - α + s) * Y - p * L̄ - f - K  # eq. 6* (rearranged)

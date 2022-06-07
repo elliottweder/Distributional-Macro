@@ -309,7 +309,7 @@ In this assignment we will explore how demographic change is affecting the aggre
 
 # ╔═╡ fa6f6504-4a9e-42d9-bb12-96c9b314bf5a
 answer1 = md"""
-Let ``n = 1``: goal is to match the ratio (because of the order of magnitude differences) of housing expenditure to income: ``\frac{ph}{y}``. In the data the value is ``\approx 2.102``. The statistic shows how important housing expenditures are compared to income. Relative to the default sliders, we increased the depreciation rate``\delta`` and the utility weight on housing ``\zeta``. Both changes increase the spending on housing. The final value of the ratio from the model is then ``\approx 2.107``, which we take to be matched with the data. 
+Let ``n = 1``: goal is to match the ratio (because of the order of magnitude differences) of housing expenditure to income: ``\frac{ph}{y}``. In the data the value is ``\approx 2.102``. The statistic shows how important housing expenditures are compared to income. Relative to the default sliders, we increased the depreciation rate ``\delta``(=0.02) and the utility weight on housing ``\zeta``(=0.113). Both changes increase the spending on housing. The final value of the ratio from the model is then ``\approx 2.107``, which we take to be matched with the data. 
 """
 
 # ╔═╡ 77de36ca-8556-409d-b249-12639c79f832
@@ -347,7 +347,7 @@ First, we plot the average consumption response to a fall in house prices over t
 
 # ╔═╡ 674cf47c-1898-46d2-a12a-3e7f16d1667e
 md"""
-Next, we plot the aggregate consumption response to a fall in house prices. The aggregate response is falling over time (rising in absolute terms) because the consumption response to a fall in house prices decreases with age (becomes more negative), and the average age is rising (from 1980 to 2040). 
+Next, we plot the aggregate consumption response to a fall in house prices. The aggregate response is falling over time (rising in absolute terms) because the negative consumption response increases in house prices decreases with age, and the average age is rising (from 1980 to 2040). 
 """
 
 # ╔═╡ 109bb399-d9ae-4ba4-a393-66cf5ce89365
@@ -360,7 +360,17 @@ The model is also not general equilibrium. Prices (wages and house prices) are n
 
 Also, in the equilibrium house ownership is constant - agents buy a house at age ``j = 25`` and keep it their entire lifecyle. The graphs below show that this is not the case in the real world. Ownership is low for young persons (age < 35) in the data. The rising home ownership rate with age is missing in the model. 
 
-The model cannot replicate the fall in home ownership among young persons over time. The falling ownership rate may be due to the fact that, in many countries, house prices have been rising for an extended period of time (rather than fluctuating between ``p_{0}`` and ``p_{1}``).  
+The model cannot replicate the fall in home ownership among young persons over time (Paz-Pardo 2022). The falling ownership rate may be due to the fact that, in many countries, house prices have been rising for an extended period of time (rather than fluctuating between ``p_{0}`` and ``p_{1}``).  
+"""
+
+# ╔═╡ 31293e17-402f-4087-b791-0efcde19a06b
+md"""
+## References
+"""
+
+# ╔═╡ b71b4570-b3f0-48af-b63d-bbef4b4abb02
+md"""
+Paz-Pardo, G. (2022). Younger generations and the lost dream of home ownership. Research Bulletin, 91.
 """
 
 # ╔═╡ ac432f89-c103-4268-ae68-d8c668b6cddc
@@ -2032,6 +2042,8 @@ version = "3.5.0+0"
 # ╟─109bb399-d9ae-4ba4-a393-66cf5ce89365
 # ╟─d3f8729a-f656-45ee-9606-8b28410ff265
 # ╠═4fcbf785-3df6-464e-94fd-54208c8306a9
+# ╟─31293e17-402f-4087-b791-0efcde19a06b
+# ╠═b71b4570-b3f0-48af-b63d-bbef4b4abb02
 # ╟─ac432f89-c103-4268-ae68-d8c668b6cddc
 # ╠═2b083233-a57c-455d-bafd-f54b42d52f6e
 # ╠═65cad8a4-3bc2-4558-a65b-5c50d3d9c99c
