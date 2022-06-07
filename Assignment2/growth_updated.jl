@@ -184,9 +184,9 @@ md"""
 md"""
 The firm solves the following profit maximisation problem:
 
-$\max A(H^{\alpha}h^{1-\alpha})^{\eta}(K^{\alpha}l^{1-\alpha}){1-\eta} - wl - qh - (1+r)K - R_{H}H$
+$\max \sum_{t=0}^{\infty}A_{t}(H^{\alpha_{t}}h_{t}^{1-\alpha})^{\eta}(K_{t}^{\alpha}l_{t}^{1-\alpha})^{1-\eta} - w_{t}l_{t} - q_{t}h_{t} - (1+r_{t})K_{t} - R_{Ht}H_{t}$
 
-The FOC wrt. $K$: 
+The FOC wrt. $K$ (removing subscripts because we are looking at the steady-state equation): 
 
 $1 + r = A(H^{\alpha}h^{1-\alpha})^{\eta}(l^{1-\alpha})^{1-\eta}\alpha(1 - \eta)K^{\alpha(1 - \eta) - 1}$
 
@@ -196,7 +196,7 @@ Which gives us equation 1.
 
 The household solves the following utility maximisation problem:
 
-$\max_{c_t, L_t, S_t, D_t} c_{t+1} + v(L_{t}) + \lambda_{t}(y_{t} - p_{t}L_{t} - f_{t}S_{t} - D_{t}) + \mu_{t}(y_{t+1} + p_{t+1}L_{t} + (f_{t+1} + d_{t+1})S_{t} + (1 + r_{t+1})D_{t} - c_{t+1})$
+$\max_{c_{t+1}, L_t, S_t, D_t} c_{t+1} + v(L_{t}) + \lambda_{t}(y_{t} - p_{t}L_{t} - f_{t}S_{t} - D_{t}) + \mu_{t}(y_{t+1} + p_{t+1}L_{t} + (f_{t+1} + d_{t+1})S_{t} + (1 + r_{t+1})D_{t} - c_{t+1})$
 
 The FOC wrt. $S_{t}$:
 
@@ -498,7 +498,7 @@ The rise in educated workers gives the following trends:
 	Directly due to K/Y rising in the model(discussed below); but intuitively because 
     there is an increase in savings 
 * Decreasing share of intangible capital
-	According to the paper, a higher ϕ should reduce investable assets, which reduces the interest rate and favours physical investments over intangible ones due to complementarity (Perotti and Döttling 2019, p. 24)
+	According to the paper, a higher ϕ should increase investable assets, which reduces the interest rate and favours physical investments over intangible ones due to complementarity (Perotti and Döttling 2019, p. 24)
 * Increasing physical capital investment
 	A rise in ϕ leads to a higher MPK, so K/Y rises (since there are diminishing returns, Y does not increase by as much). 
 * Fall in mortgage borrowing

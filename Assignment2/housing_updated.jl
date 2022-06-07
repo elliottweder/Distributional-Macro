@@ -309,7 +309,7 @@ In this assignment we will explore how demographic change is affecting the aggre
 
 # ╔═╡ fa6f6504-4a9e-42d9-bb12-96c9b314bf5a
 answer1 = md"""
-Let ``n = 1``: goal is to match the ratio (because of the order of magnitude differences) of housing expenditure to income: ``\frac{ph}{y}``. In the data the value is ``\approx 2.102``. The statistic shows how important housing expenditures are compared to income. Relative to the default sliders, we increased the depreciation rate ``\delta``(=0.02) and the utility weight on housing ``\zeta``(=0.113). Both changes increase the spending on housing. The final value of the ratio from the model is then ``\approx 2.107``, which we take to be matched with the data. 
+Let ``n = 1``: goal is to match the ratio (because of the order of magnitude differences) of housing expenditure to income: ``\frac{ph}{y}``. In the data the value is ``\approx 2.102``. The statistic shows how important housing expenditures are compared to income. Relative to the default sliders, we increased the depreciation rate ``\delta``(=0.02 to =0.03) and the utility weight on housing ``\zeta``(=0.113 to =0.114). Both changes increase the spending on housing. The final value of the ratio from the model is then ``\approx 2.107``, which we take to be matched with the data. 
 """
 
 # ╔═╡ 77de36ca-8556-409d-b249-12639c79f832
@@ -347,7 +347,7 @@ First, we plot the average consumption response to a fall in house prices over t
 
 # ╔═╡ 674cf47c-1898-46d2-a12a-3e7f16d1667e
 md"""
-Next, we plot the aggregate consumption response to a fall in house prices. The aggregate response is falling over time (rising in absolute terms) because the negative consumption response increases in house prices decreases with age, and the average age is rising (from 1980 to 2040). 
+Next, we plot the aggregate consumption response to a fall in house prices. The aggregate response is falling over time (rising in absolute terms) because the negative consumption response increases with age, and the average age is rising (from 1980 to 2040). 
 """
 
 # ╔═╡ 109bb399-d9ae-4ba4-a393-66cf5ce89365
@@ -356,9 +356,9 @@ No, we would not use the model. There are several aspects of housing markets and
 
 The financial sector and housing market are intimately linked in the real world. In the model there is no financial sector, especially one that is exposed to the housing sector (important during the GFC). 
 
-The model is also not general equilibrium. Prices (wages and house prices) are not determined by demand and supply. Futhermore, the supply of housing is completely elastic - in real life there are resource and space constraints.  
+The model is not general equilibrium. Prices (wages and house prices) are not determined by demand and supply. Futhermore, the supply of housing is completely elastic - in real life there are resource and space constraints.  
 
-Also, in the equilibrium house ownership is constant - agents buy a house at age ``j = 25`` and keep it their entire lifecyle. The graphs below show that this is not the case in the real world. Ownership is low for young persons (age < 35) in the data. The rising home ownership rate with age is missing in the model. 
+In the equilibrium house ownership is constant - agents buy a house at age ``j = 25`` and keep it their entire lifecyle. The graphs below show that this is not the case in the real world. Ownership is low for young persons (age < 35) in the data. The rising home ownership rate with age is missing in the model. 
 
 The model cannot replicate the fall in home ownership among young persons over time (Paz-Pardo 2022). The falling ownership rate may be due to the fact that, in many countries, house prices have been rising for an extended period of time (rather than fluctuating between ``p_{0}`` and ``p_{1}``).  
 """
