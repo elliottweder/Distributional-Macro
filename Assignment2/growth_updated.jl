@@ -184,7 +184,7 @@ md"""
 md"""
 The firm solves the following profit maximisation problem:
 
-$\max \sum_{t=0}^{\infty}A_{t}(H^{\alpha_{t}}h_{t}^{1-\alpha})^{\eta}(K_{t}^{\alpha}l_{t}^{1-\alpha})^{1-\eta} - w_{t}l_{t} - q_{t}h_{t} - (1+r_{t})K_{t} - R_{Ht}H_{t}$
+$\max_{K_{t}, H_{t}, h_{t}, l_{t}} \sum_{t=0}^{\infty}A_{t}(H^{\alpha_{t}}h_{t}^{1-\alpha})^{\eta}(K_{t}^{\alpha}l_{t}^{1-\alpha})^{1-\eta} - w_{t}l_{t} - q_{t}h_{t} - (1+r_{t})K_{t} - R_{Ht}H_{t}$
 
 The FOC wrt. $K$ (removing subscripts because we are looking at the steady-state equation): 
 
