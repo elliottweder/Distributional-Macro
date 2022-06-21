@@ -146,7 +146,7 @@ First, we find it strange that not signficant in first regression
 
 First, the IV specification is likely to suffer from reverse causaily.
 
-The econoemtric model is very sensitive to changes in the IV - meaning that not liekly to be that robust (change to 300, which makes more sense as an IV, compeltey changes the results )
+The econoemtric model is very sensitive to changes in the IV - meaning that not liekly to be that robust (change to 300, which makes more sense as an IV, compeltey changes the results ) -- the dimensions and negative r2 is very weird... 
 """
 
 # ╔═╡ 24013463-f8ea-463f-81e9-06542880dc8b
